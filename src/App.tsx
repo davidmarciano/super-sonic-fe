@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+import { ConfigProvider } from 'antd';
+import { RecommendedApps } from './components';
 
-function App() {
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+`;
+
+const theme = {
+  token: {
+    colorPrimary: '#FF542D',
+    colorTextBase: '#00214D',
+  }
+};
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ConfigProvider theme={theme}>
+      <Wrapper>
+        <RecommendedApps />
+      </Wrapper>
+    </ConfigProvider>
   );
 }
 

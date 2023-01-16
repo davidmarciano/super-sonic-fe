@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Description
+## Install and Run
 
 This application is running on port `3000`, make sure this port is free to use before you start the app. <br />
 Before running the app you should do 2 things:
